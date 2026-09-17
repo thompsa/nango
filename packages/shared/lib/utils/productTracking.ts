@@ -11,7 +11,12 @@ export type ProductTrackingTypes =
     | 'account:billing:plan_changed'
     | 'account:billing:plan_changed:v2'
     | 'account:billing:downgraded'
-    | 'account:billing:upgraded';
+    | 'account:billing:upgraded'
+    | 'session_created'
+    | 'session_terminated'
+    | 'nango_execute'
+    | 'execute_pinned_tool'
+    | 'nango_proxy';
 
 export interface TrackingContext {
     team: Pick<DBTeam, 'id' | 'name'>;
