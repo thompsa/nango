@@ -214,7 +214,7 @@ export async function deployBundle({
                     }
                 }
                 // If the after trigger is a schedule and there is a before state with a non-schedule trigger, create a new instance
-                else if (artifact.trigger.kind === 'schedule' && before?.config.enabled && before.currentVersion.trigger.kind !== 'schedule') {
+                else if (artifact.trigger.kind === 'schedule' && before?.config.enabled && before?.currentVersion.trigger.kind !== 'schedule') {
                     upsertCandidate = {
                         functionConfigId: before.config.id,
                         integrationId: before.integration.id,
